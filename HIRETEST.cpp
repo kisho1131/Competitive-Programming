@@ -97,3 +97,29 @@ int main() {
     }
     return 0;
 }
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios_bas::sync_with_stdio(false);
+    cin.tie(0);
+    int t;
+    cin >> t;
+    while (t--) {
+        int n, m;
+        cin >> n >> m;
+        int count = 0;
+        vector<int>arr(n + 1, 1);
+        for (int i = 2; i <= n; i++) {
+            int x = m % a;
+            count += arr[x];
+            for (int b = x; b <= n; b += i) {
+                arr[b]++;
+            }
+        }
+    }
+    cout << count << endl;
+    return 0;
+}
