@@ -14,8 +14,7 @@ using namespace std;
 #define Fo(i, k, n) for (i = k; k < n ? i < n : i > n; k < n ? i += 1 : i -= 1)
 #define deb(x) cout << #x << " = " << x << endl;
 #define deb2(x, y) cout << #x << " = " << x << ", " << #y << " = " << y << endl
-#define deba(i, a, n)                                                          \
-  fo(i, n) { cout << a[i] << " "; }
+#define deba(i, a, n)
 #define pb push_back
 #define mp make_pair
 #define F first
@@ -34,8 +33,7 @@ typedef vector<pii> vpii;
 typedef vector<pl> vpl;
 typedef vector<vi> vvi;
 typedef vector<vl> vvl;
-mt19937_64
-    rang(chrono::high_resolution_clock::now().time_since_epoch().count());
+mt19937_64rang(chrono::high_resolution_clock::now().time_since_epoch().count());
 int rng(int lim) {
   uniform_int_distribution<int> uid(0, lim - 1);
   return uid(rang);
