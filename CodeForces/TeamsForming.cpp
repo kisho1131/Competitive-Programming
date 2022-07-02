@@ -46,7 +46,17 @@ int a[N];
 
 /* ========== YOUR CODE START HERE ========= */
 void solution() {
-    
+    ll n;
+    cin>>n;
+    ll arr[n];
+    for(int i =0;i<n;i++)
+        cin>>arr[i];
+    sort(arr, arr + n);
+    int count = 0;
+    for(int i =0;i<n;i+=2){
+        count+= arr[i+1] - arr[i];
+    }
+    cout<<count;
 }
 
 /* ========== YOUR CODE END HERE ========= */
@@ -63,7 +73,7 @@ int main() {
 #endif
 
     int t = 1;
-    cin >> t;
+    // cin >> t;
     while (t--) {
         solution();
         cout << endl;

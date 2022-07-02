@@ -1,3 +1,5 @@
+// Question Link : https://codeforces.com/problemset/problem/1497/A
+
 #include<bits/stdc++.h>
 using namespace std;
 #define gc getchar_unlocked
@@ -44,9 +46,27 @@ const int N = 3e5;
 vi v[N];
 int a[N];
 
-/* ========== YOUR CODE START HERE ========= */
+/* ========== YOUR CODE HERE ========= */
 void solution() {
-    
+    int n;
+	cin>>n;
+	ll arr[n];
+	for(int i =0;i<n;i++)
+		cin>>arr[i];
+
+	sort(arr, arr + n);
+	vector<ll>ans;
+	ans.push_back(arr[0]);
+	for(int i =1;i<n;i++)
+		if(arr[i]!= arr[i-1])
+			ans.push_back(arr[i]);
+
+	for(int i =1;i<n;i++)
+		if(arr[i] == arr[i-1])
+			ans.push_back(arr[i]);
+
+	for(auto ele : ans)
+		cout<<ele<<" ";
 }
 
 /* ========== YOUR CODE END HERE ========= */

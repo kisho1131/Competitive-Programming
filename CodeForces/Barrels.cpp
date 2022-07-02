@@ -46,7 +46,20 @@ int a[N];
 
 /* ========== YOUR CODE START HERE ========= */
 void solution() {
-    
+    ll n, k;
+    cin>>n>>k;
+    ll arr[n];
+    for(int i =0;i<n;i++)
+        cin>>arr[i];
+    sort(arr, arr+n);
+    int count = 1;
+    while(count <= k){
+        arr[n-1] += arr[n-1-count];
+        arr[n-1-count] = 0;
+        count++;
+    }
+    cout<<arr[n-1];
+
 }
 
 /* ========== YOUR CODE END HERE ========= */
